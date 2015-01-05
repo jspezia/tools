@@ -1,0 +1,35 @@
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    .myvimrc                                           :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2013/06/15 12:36:36 by zaz               #+#    #+#              "
+"    Updated: 2014/01/15 19:39:54 by jspezia          ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
+
+"Put your custom Vim configuration here
+
+
+syntax on
+set number
+set tabstop=4
+set showmatch
+au BufWinEnter * let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)
+" Highlight Tabs and Spaces
+au BufWinEnter * let w:m2=matchadd('Tab', '\t', -1)
+au BufWinEnter * let w:m3=matchadd('Space', '\s\+$\| \+\ze\t', -1)
+set list listchars=tab:▸\ ,trail:·
+highlight Tab ctermbg=none guibg=none
+highlight Space ctermbg=darkred guibg=darkred
+
+set mouse=a
+
+"Better command completion
+set wildmenu
+set wildmode=list:longest
+
+" Show current line
+set cursorline
