@@ -85,6 +85,7 @@ alias gpl="git pull"
 alias gps="git push"
 alias gm="git merge"
 alias gu="git add -u"
+alias gs="git status"
 
 # Definition des alias
 alias c="clear"
